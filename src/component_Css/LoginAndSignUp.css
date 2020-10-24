@@ -1,0 +1,127 @@
+.signup, .login{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.signup h1, .login h1{
+    align-self: center;
+    margin-bottom:1rem;
+    color:rgb(88, 88, 88);
+}
+.signup__form, .login__form{
+    box-sizing: border-box;
+    background-color: #fff;
+    display:flex;
+    flex-direction:column;
+    width:min(500px,90%);
+    padding:2rem 1.5rem 5rem;
+    border:1px solid #ccc;
+    border-radius:1rem;
+    box-shadow:2px 2px 15px 0px rgba(0, 0, 0, 0.24);
+}
+.signup__icons, .login__icons{
+    transform:translateY(1.5rem);
+    z-index:1;
+    position: relative;
+}
+.signup__icons::after, .login__icons::after{
+    content:'';
+    position:absolute;
+    width:10px;
+    height:2px;
+    background-color: red;
+}
+.signup__form>input, .login__form>input{
+    padding: .4rem ;
+    padding-left: 2rem;
+    /* margin-bottom:1rem; */
+    font-size:1rem;
+    border:0;
+    outline:none;
+    position: relative;
+    border-bottom: 2px solid rgba(88, 88, 88, 0.432);
+    color:rgb(88, 88, 88)
+    
+}
+.signup__form>label, .login__form>label{
+    transform: translate(1.6rem,-2rem);
+    transition: .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    height:18px;
+    font-weight: 600;
+    color:rgb(88, 88, 88);
+    background: transparent;
+
+}
+.focused{
+    color: #8e44ad;
+}
+.signup__submit,.signup__withGoogle,
+.login__submit,.login__withGoogle
+{
+    padding:.6rem 1rem;
+    border-radius:1.5rem;
+    background-color: #fff;
+    border:2px solid rgb(88, 88, 88);
+    font-weight:700;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+    font-size:1rem;
+    color:rgb(88, 88, 88);
+    cursor:pointer;
+    transition: .4s;
+    margin:.5rem 0;
+}
+/* .signup__submit:hover{
+    background: none;
+    color:#8e44ad ;
+} */
+/* .signup__withGoogle{
+    background-color: #fff;
+    border:2px solid #e74c3c;
+    box-shadow:0 0 20px 2px #e74c3c5e;
+
+} */
+
+.signup__form>input:focus, .signup__form>input:valid,
+.login__form>input:focus, .login__form>input:valid
+{
+    border-color:#8e44ad;
+}
+.login__form>input:focus + label, .login__form>input:valid + label,
+.signup__form>input:focus + label, .signup__form>input:valid + label{
+    transform: translateY(-3.6rem);
+    color: #8e44ad;
+    font-size:.8rem
+}
+
+.signup__or, .login__or{
+    width:100%;
+    position: relative;
+    align-self:center;
+    display:flex;
+    justify-content: center;
+    margin:.8rem 0;
+
+}
+.signup__terms, .signup__redirect,
+.login__terms, .login__redirect{
+    font-size: 1rem;
+    font-weight:600;
+    color:rgb(114, 114, 114);
+}
+.signup__or::after, .signup__or::before,
+.login__or::after, .login__or::before{
+    content:'';
+    position: absolute;
+    width:43%;
+    height:1px;
+    top:50%;
+    background-color: rgba(170, 170, 170, 0.315);
+}
+.signup__or::after,.login__or::after{
+    left:0;
+}
+.signup__or::before,.login__or::before{
+    right:0;
+}
